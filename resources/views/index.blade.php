@@ -12,7 +12,9 @@
             </form>
         </header>
         <section>
-            <x-todo />
+            @foreach ($todos as $todo)
+            <x-todo :text="$todo->text" />
+            @endforeach
         </section>
         <section class="mt-12">
             <h2 class="font-medium">Done</h2>
