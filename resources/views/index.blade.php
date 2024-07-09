@@ -12,13 +12,15 @@
             </form>
         </header>
         <section>
-            @foreach ($todos as $todo)
-            <x-todo :text="$todo->text" />
+            @foreach ($todos->where('done', 0) as $todo)
+            <x-todo :todo="$todo" />
             @endforeach
         </section>
         <section class="mt-12">
             <h2 class="font-medium">Done</h2>
-            <x-todo />
+            @foreach ($todos->where('done', 1) as $todo)
+            <x-todo :todo="$todo" />
+            @endforeach
         </section>
     </main>
 @endsection

@@ -19,8 +19,21 @@ class TodosController extends Controller
     public function read()
     {
     }
-    public function update(int $id)
+    public function update(string $type, int $id)
     {
+
+        $todo = Todo::find($id);
+        switch ($type) {
+            case 'done':
+                $todo->done = true;
+                break;
+            case 'undo':
+                $todo->done = false;
+                break;
+        }
+        $todo->save();
+
+        return redirect()->back();
     }
     public function delete(int $id)
     {

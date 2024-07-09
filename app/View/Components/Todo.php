@@ -2,7 +2,7 @@
 
 namespace App\View\Components;
 
-use Closure;
+use App\Models\Todo as TodoModel;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
@@ -12,7 +12,7 @@ class Todo extends Component
      * Create a new component instance.
      */
     public function __construct(
-        public string $text = ''
+        public TodoModel $todo
     ) {
     }
 
