@@ -4,6 +4,12 @@
     <main class="py-12 max-w-xl mx-auto">
         <header>
             <h1 class="font-medium">Todos</h1>
+
+            <form method="POST" action="/todos/create">
+                @csrf
+                <input name="text" type="text" placeholder="Add a todo...">
+                <button>Create</button>
+            </form>
         </header>
         <section>
             <x-todo />
