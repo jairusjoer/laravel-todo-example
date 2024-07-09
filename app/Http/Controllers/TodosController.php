@@ -18,10 +18,10 @@ class TodosController extends Controller
     }
     public function read()
     {
+        return Todo::all();
     }
-    public function update(string $type, int $id)
+    public function update(Request $request, string $type, int $id)
     {
-
         $todo = Todo::find($id);
         switch ($type) {
             case 'done':
@@ -30,6 +30,9 @@ class TodosController extends Controller
             case 'undo':
                 $todo->done = false;
                 break;
+            case 'text':
+                $todo->text = $request->string('text')->trim();
+                break;
         }
         $todo->save();
 
@@ -37,5 +40,9 @@ class TodosController extends Controller
     }
     public function delete(int $id)
     {
+        $todo = Todo::find($id);
+        $todo->delete();
+
+        return redirect()->back();
     }
 }

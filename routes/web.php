@@ -11,5 +11,5 @@ Route::get('/', function () {
 
 Route::post('/todos/create', [TodosController::class, 'create']);
 Route::get('/todos/read', [TodosController::class, 'read']);
-Route::get('/todos/update/{type}/{id}', [TodosController::class, 'update']);
+Route::post('/todos/update/{type}/{id}', [TodosController::class, 'update']);
 Route::post('/todos/delete/{id}', [TodosController::class, 'delete']);
