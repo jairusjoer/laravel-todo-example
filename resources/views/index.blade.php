@@ -12,11 +12,11 @@
             </form>
         </header>
         <section>
-            <livewire:todos :todos="$todos->where('done', 0)" />
+            <livewire:components.todos :where="['done', 0]" />
         </section>
         <section class="mt-12">
             <h2 class="font-medium">Done</h2>
-            <livewire:todos :todos="$todos->where('done', 1)" />
+            <livewire:components.todos :where="['done', 1]" />
         </section>
     </main>
 @endsection

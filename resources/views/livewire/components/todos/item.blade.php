@@ -5,9 +5,9 @@
         <button>Update</button>
     </form>
     @if ($todo->done == 1)
-        <button action="/todos/update/undo/{{ $todo->id }}">Undo</a>
+        <button wire:click="undo">Undo</a>
         @else
-            <button action="/todos/update/done/{{ $todo->id }}">Done</a>
+            <button wire:click="done">Done</a>
     @endif
     <button wire:click="delete">Delete</a>
 </div>

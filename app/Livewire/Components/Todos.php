@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Components;
 
 use App\Models\Todo;
 use Illuminate\Database\Eloquent\Collection;
@@ -10,14 +10,13 @@ use Livewire\Attributes\On;
 class Todos extends Component
 {
     public Collection $todos;
+    public array $where;
 
-    public function mount() {
-        $this->todos ??= Todo::all();
-    }
-
-    #[On('delete')]
+    #[On(['todo.delete', 'todo.done', 'todo.undo'])]
     public function render()
     {
-        return view('livewire.todos');
+        $this->todos = Todo::where(...$this->where)->get();
+        return view('livewire.components.todos');
     }
+
 }
