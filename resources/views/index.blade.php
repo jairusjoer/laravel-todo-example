@@ -13,13 +13,13 @@
         </header>
         <section>
             @foreach ($todos->where('done', 0) as $todo)
-            <x-todo :todo="$todo" />
+                <livewire:todo :$todo :key="$todo->id" />
             @endforeach
         </section>
         <section class="mt-12">
             <h2 class="font-medium">Done</h2>
             @foreach ($todos->where('done', 1) as $todo)
-            <x-todo :todo="$todo" />
+                <livewire:todo :$todo :key="$todo->id" />
             @endforeach
         </section>
     </main>
