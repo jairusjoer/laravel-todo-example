@@ -12,15 +12,11 @@
             </form>
         </header>
         <section>
-            @foreach ($todos->where('done', 0) as $todo)
-                <livewire:todo :$todo :key="$todo->id" />
-            @endforeach
+            <livewire:todos :todos="$todos->where('done', 0)" />
         </section>
         <section class="mt-12">
             <h2 class="font-medium">Done</h2>
-            @foreach ($todos->where('done', 1) as $todo)
-                <livewire:todo :$todo :key="$todo->id" />
-            @endforeach
+            <livewire:todos :todos="$todos->where('done', 1)" />
         </section>
     </main>
 @endsection
