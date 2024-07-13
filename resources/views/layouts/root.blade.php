@@ -9,12 +9,15 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     @vite(['resources/css/globals.css', 'resources/js/globals.js'])
+    @livewireStyles
 </head>
 
 <body class="text-base font-sans antialiased">
     <div id="root" class="">
         @yield('root')
     </div>
+
+    @livewireScripts
 </body>
 
 </html>
