@@ -5,9 +5,7 @@ use function Livewire\Volt\{state};
 state(['text' => '']);
 
 $create = function () {
-    $validated = $this->validate([
-        'text' => 'required|min:1',
-    ]);
+    $validated = $this->validate(Todo::$rules);
 
     Todo::create([
         'text' => $validated['text'],

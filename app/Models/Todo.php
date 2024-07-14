@@ -12,4 +12,8 @@ class Todo extends Model
     protected $table = 'todos';
 
     protected $fillable = [ 'text', 'done' ];
+
+    public static $rules = [
+        'text' => 'required|unique:todos|max:255',
+    ];
 }
