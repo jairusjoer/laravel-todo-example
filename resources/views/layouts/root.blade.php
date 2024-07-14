@@ -17,7 +17,7 @@
         @yield('root')
     </div>
 
-    @livewireScripts
+    @livewireScriptConfig
 </body>
 
 </html>

@@ -1,0 +1,53 @@
+@tailwind base;
+
+@layer base {
+    :root {
+        --background: #fafafa;
+        --foreground: #09090b;
+
+        --muted: #f4f4f5;
+        --muted-foreground: #52525b;
+
+        --card: var(--background);
+        --card-foreground: var(--foreground);
+
+        --popover: var(--background);
+        --popover-foreground: var(--foreground);
+
+        --border: #e4e4e7;
+
+        --input: var(--border);
+
+        --button: var(--foreground);
+        --button-subtle: var(--muted);
+
+        --brand-bold: #1e1b4b;
+        --brand: #4f46e5;
+        --brand-subtle: #e0e7ff;
+
+        --informative-bold: #082f49;
+        --informative: #0284c7;
+        --informative-subtle: #e0f2fe;
+
+        --successful-bold: #022c22;
+        --successful: #059669;
+        --successful-subtle: #d1fae5;
+
+        --cautionary-bold: #451a03;
+        --cautionary: #d97706;
+        --cautionary-subtle: #fef3c7;
+
+        --destructive-bold: #4c0519;
+        --destructive: #e11d48;
+        --destructive-subtle: #ffe4e6;
+
+        --ring: var(--brand-bold);
+
+        --border-width: 0.09375rem;
+        --border-radius: 0.75rem;
+    }
+
+    [x-cloak] {
+        display: none !important;
+    }
+}

@@ -12,10 +12,10 @@ class Todos extends Component
     public Collection $todos;
     public array $where = [];
 
-    #[On(['todo.delete', 'todo.done', 'todo.undo'])]
+    #[On(['todo.create', 'todo.delete', 'todo.done', 'todo.undo'])]
     public function render()
     {
-        $this->todos = Todo::where(...$this->where)->get();
+        $this->todos = Todo::where(...$this->where)->get()->reverse();
 
         return view('livewire.components.todos');
     }
