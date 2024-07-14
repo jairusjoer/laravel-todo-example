@@ -11,8 +11,7 @@ state([
 
 on([
     'todo.create' => $fetch,
-    'todo.done' => $fetch,
-    'todo.undo' => $fetch,
+    'todo.update' => $fetch,
     'todo.delete' => $fetch,
 ]);
 ?>
