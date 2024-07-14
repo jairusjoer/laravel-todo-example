@@ -1,5 +1,4 @@
 <?php
-
 use App\Models\Todo;
 use function Livewire\Volt\{state};
 
@@ -17,7 +16,6 @@ $create = function () {
 
     $this->dispatch('todo.create');
 };
-
 ?>
 
 <form class="grow flex items-start gap-1 p-2 bg-brand-subtle rounded-xl" wire:submit="create"
