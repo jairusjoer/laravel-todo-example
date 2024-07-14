@@ -5,5 +5,5 @@ use App\Models\Todo;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('index', ['todos' => Todo::all()]);
+    return view('pages/index', ['todos' => Todo::all()]);
 });

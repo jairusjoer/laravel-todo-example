@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Components\Todos;
+namespace App\Livewire\Components\Todo;
 
 use App\Models\Todo as TodoModel;
 use Livewire\Component;
@@ -19,7 +19,7 @@ class Item extends Component
 
     public function render()
     {
-        return view('livewire.components.todos.item');
+        return view('livewire.components.todo.item');
     }
 
     // C R U D opertaions
