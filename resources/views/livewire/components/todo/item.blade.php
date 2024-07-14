@@ -45,16 +45,16 @@ $delete = function ()
         @csrf
         <input x-ref="input" wire:model="text" class="grow h-8 p-2 rounded outline-brand bg-muted" type="text"
             placeholder="{{ $todo->text }}">
-        <button class="button-brand-muted" title="Update"><x-icon variant="pencil" /></button>
+        <button class="button-brand-muted" title="Update"><livewire:components.icon variant="pencil" /></button>
     </form>
 
     <div class="ml-auto flex gap-1">
         @if ($todo->done == 1)
-            <button class="button-cautionary-muted" wire:click="update('undo')" title="Undo"><x-icon
+            <button class="button-cautionary-muted" wire:click="update('undo')" title="Undo"><livewire:components.icon
                     variant="undo-2" /></button>
         @else
-            <button class="button-successful-muted" wire:click="update('done')" title="Done"><x-icon variant="check" /></button>
+            <button class="button-successful-muted" wire:click="update('done')" title="Done"><livewire:components.icon variant="check" /></button>
         @endif
-        <button class="button-destructive-muted" wire:click="delete" title="Delete"><x-icon variant="trash" /></button>
+        <button class="button-destructive-muted" wire:click="delete" title="Delete"><livewire:components.icon variant="trash" /></button>
     </div>
 </div>

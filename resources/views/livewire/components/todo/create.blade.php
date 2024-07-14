@@ -25,9 +25,9 @@ $create = function () {
         <input wire:model="text" class="w-full h-8 p-2 rounded outline-brand bg-background border" type="text"
             placeholder="Create a new Todo..." required>
         @error('text')
-            <div class="mt-2 flex gap-1 leading-4 text-small text-destructive"><x-icon variant="circle-x" />
+            <div class="mt-2 flex gap-1 leading-4 text-small text-destructive"><livewire:components.icon variant="circle-x" />
                 {{ $message }}</div>
         @enderror
     </div>
-    <button class="button-brand-solid" title="Create"><x-icon variant="plus" /></button>
+    <button class="button-brand-solid" title="Create"><livewire:components.icon variant="plus" /></button>
 </form>

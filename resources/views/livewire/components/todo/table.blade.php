@@ -5,8 +5,8 @@ use function Livewire\Volt\{state, on};
 $fetch = fn() => ($this->todos = Todo::where(...$this->where)->get()->reverse());
 
 state([
-    'todos' => $fetch,
     'where' => [],
+    'todos' => $fetch,
 ]);
 
 on([
