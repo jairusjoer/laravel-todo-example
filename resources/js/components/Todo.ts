@@ -1,4 +1,4 @@
-export const Todo = () => ({
+export const Todo = (): any => ({
     edit: false,
 
     focus() {

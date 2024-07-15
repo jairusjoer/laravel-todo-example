@@ -31,7 +31,9 @@ $create = function () {
             required
         />
         @error('text')
-            <div class="mt-2 flex gap-1 text-small leading-4 text-destructive">
+            <div
+                class="mt-2 flex gap-1 px-2 text-small leading-4 text-destructive"
+            >
                 <livewire:components.icon variant="circle-x" />
                 {{ $message }}
             </div>
