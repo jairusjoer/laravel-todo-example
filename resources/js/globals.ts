@@ -1,5 +1,8 @@
-import axios from "axios";
-import { Livewire, Alpine } from '../../vendor/livewire/livewire/dist/livewire.esm.js';
+import axios from 'axios';
+import {
+    Livewire,
+    Alpine,
+} from '../../vendor/livewire/livewire/dist/livewire.esm.js';
 import { Todo } from './components/Todo';
 
 /**
@@ -7,9 +10,9 @@ import { Todo } from './components/Todo';
  */
 
 declare global {
-  interface Window {
-	axios: typeof axios;
-  }
+    interface Window {
+        axios: typeof axios;
+    }
 }
 window.axios = axios;
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
@@ -20,4 +23,4 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 Alpine.data('todo', Todo);
 
-Livewire.start()
+Livewire.start();

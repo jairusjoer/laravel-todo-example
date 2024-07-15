@@ -16,16 +16,28 @@ $create = function () {
 };
 ?>
 
-<form class="grow flex items-start gap-1 p-2 border rounded-xl" wire:submit="create"
-    x-on:submit="setTimeout(() => $el.reset(), 75)">
+<form
+    class="flex grow items-start gap-1 rounded-xl border p-2"
+    wire:submit="create"
+    x-on:submit="setTimeout(() => $el.reset(), 75)"
+>
     @csrf
     <div class="grow">
-        <input wire:model="text" class="w-full h-8 p-2 rounded outline-brand bg-background text-foreground truncate" type="text"
-            placeholder="Click to create a new aaa Todo..." required>
+        <input
+            wire:model="text"
+            class="h-8 w-full truncate rounded bg-background p-2 text-foreground outline-brand"
+            type="text"
+            placeholder="Click to create a new aaa Todo..."
+            required
+        />
         @error('text')
-            <div class="mt-2 flex gap-1 leading-4 text-small text-destructive"><livewire:components.icon variant="circle-x" />
-                {{ $message }}</div>
+            <div class="mt-2 flex gap-1 text-small leading-4 text-destructive">
+                <livewire:components.icon variant="circle-x" />
+                {{ $message }}
+            </div>
         @enderror
     </div>
-    <button class="button-button-solid" title="Create"><livewire:components.icon variant="plus" /></button>
+    <button class="button-button-solid" title="Create">
+        <livewire:components.icon variant="plus" />
+    </button>
 </form>

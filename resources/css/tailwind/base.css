@@ -54,7 +54,7 @@
             --muted-foreground: #a1a1aa;
 
             --border: #3f3f46;
-;
+
             --brand-subtle: #1e1b4b;
             --brand: #4f46e5;
             --brand-bold: #e0e7ff;
@@ -83,5 +83,5 @@
 
     * {
         @apply border-border;
-      }
+    }
 }
