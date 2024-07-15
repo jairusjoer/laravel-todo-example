@@ -45,9 +45,43 @@
 
         --border-width: 0.09375rem;
         --border-radius: 0.75rem;
+
+        @media (prefers-color-scheme: dark) {
+            --background: #18181b;
+            --foreground: #fafafa;
+
+            --muted: #27272a;
+            --muted-foreground: #a1a1aa;
+
+            --border: #3f3f46;
+;
+            --brand-subtle: #1e1b4b;
+            --brand: #4f46e5;
+            --brand-bold: #e0e7ff;
+
+            --informative-subtle: #082f49;
+            --informative: #0284c7;
+            --informative-bold: #e0f2fe;
+
+            --successful-subtle: #022c22;
+            --successful: #059669;
+            --successful-bold: #d1fae5;
+
+            --cautionary-subtle: #451a03;
+            --cautionary: #d97706;
+            --cautionary-bold: #fef3c7;
+
+            --destructive-subtle: #4c0519;
+            --destructive: #e11d48;
+            --destructive-bold: #ffe4e6;
+        }
     }
 
     [x-cloak] {
         display: none !important;
     }
+
+    * {
+        @apply border-border;
+      }
 }

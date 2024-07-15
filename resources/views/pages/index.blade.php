@@ -24,17 +24,18 @@ on([
 
 @section('root')
     @volt('index')
-        <main class="py-12 max-w-xl mx-auto">
+        <main class="py-12 px-6 max-w-xl mx-auto">
             <header>
-                <h2 class="mb-1.5 font-medium">New Todo</h1>
+                <h1 class="mb-12 text-h5 text-center text-foreground font-medium">Todo 📓</h1>
+                <h2 class="ml-4 mb-1.5 font-medium text-small">New Todo</h1>
                     <livewire:components.todo.create />
             </header>
             <section class="mt-6">
-                <h2 class="mb-1.5 font-medium">To be done ({{ count($open) }})</h1>
+                <h2 class="ml-4 mb-1.5 font-medium text-small">To be done ({{ count($open) }})</h1>
                     <livewire:components.todo.table :data="$open" />
             </section>
             <section class="mt-6">
-                <h2 class="mb-1.5 font-medium">Done ({{ count($done) }})</h2>
+                <h2 class="ml-4 mb-1.5 font-medium text-small">Done ({{ count($done) }})</h2>
                 <livewire:components.todo.table :data="$done" />
             </section>
         </main>
