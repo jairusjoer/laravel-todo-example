@@ -5,8 +5,8 @@ use function Livewire\Volt\{state, mount, on};
 $fetch = function () {
     $query = Todo::all()->reverse()->groupBy('done');
 
-    $this->open = collect($query->get(0));
-    $this->done = collect($query->get(1));
+    $this->open = $query->get(0) ?? [];
+    $this->done = $query->get(1) ?? [];
 };
 
 state(['open', 'done']);
@@ -30,11 +30,11 @@ on([
                     <livewire:components.todo.create />
             </header>
             <section class="mt-6">
-                <h2 class="mb-1.5 font-medium">To be done ({{ $open->count() }})</h1>
+                <h2 class="mb-1.5 font-medium">To be done ({{ count($open) }})</h1>
                     <livewire:components.todo.table :data="$open" />
             </section>
             <section class="mt-6">
-                <h2 class="mb-1.5 font-medium">Done ({{ $done->count() }})</h2>
+                <h2 class="mb-1.5 font-medium">Done ({{ count($done) }})</h2>
                 <livewire:components.todo.table :data="$done" />
             </section>
         </main>
