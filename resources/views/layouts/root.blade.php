@@ -8,7 +8,7 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    @vite(['resources/css/globals.css', 'resources/js/globals.js'])
+    @vite(['resources/css/globals.css', 'resources/js/globals.ts'])
     @livewireStyles
 </head>
 

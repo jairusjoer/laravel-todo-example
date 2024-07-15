@@ -8,7 +8,7 @@ import autoprefixer from "autoprefixer";
 export default defineConfig({
     plugins: [
         laravel({
-            input: ["resources/css/globals.css", "resources/js/globals.js"],
+            input: ["resources/css/globals.css", "resources/js/globals.ts"],
             refresh: true,
         }),
     ],

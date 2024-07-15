@@ -5,14 +5,11 @@ use function Livewire\Volt\{state, mount, on};
 $fetch = function () {
     $query = Todo::all()->reverse()->groupBy('done');
 
-    $this->open = $query->get(0);
-    $this->done = $query->get(1);
+    $this->open = collect($query->get(0));
+    $this->done = collect($query->get(1));
 };
 
-state([
-    'open' => [],
-    'done' => [],
-]);
+state(['open', 'done']);
 
 mount($fetch);
 
