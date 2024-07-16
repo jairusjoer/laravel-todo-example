@@ -2,6 +2,7 @@
     "private": true,
     "type": "module",
     "scripts": {
+        "quickstart": "bash quickstart",
         "dev": "vite",
         "build": "vite build",
         "prettier": "prettier resources/**/*.{?(s)css,js,php,ts} --write"
