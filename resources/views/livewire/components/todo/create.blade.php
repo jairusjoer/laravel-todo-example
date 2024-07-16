@@ -27,7 +27,7 @@ $create = function () {
             wire:model="text"
             class="h-8 w-full truncate rounded bg-background p-2 text-foreground outline-brand"
             type="text"
-            placeholder="Click to create a new aaa Todo..."
+            placeholder="Click to create a new Todo..."
             required
         />
         @error('text')
