@@ -39,7 +39,7 @@ $create = function () {
             </div>
         @enderror
     </div>
-    <button class="button-button-solid" title="Create">
-        <livewire:components.icon variant="plus" />
+    <button class="button-button-solid group" title="Create">
+        <livewire:components.icon variant="plus" class="group-hover:animate-wiggle" />
     </button>
 </form>

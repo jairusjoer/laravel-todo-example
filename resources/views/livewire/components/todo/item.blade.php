@@ -59,35 +59,35 @@ $delete = function () {
             type="text"
             placeholder="{{ $todo->text }}"
         />
-        <button class="button-button-solid" title="Update">
-            <livewire:components.icon variant="pencil" />
+        <button class="button-button-solid group" title="Update">
+            <livewire:components.icon variant="pencil" class="group-hover:animate-wiggle" />
         </button>
     </form>
 
     <div class="ml-auto flex gap-1">
         @if ($todo->done == 1)
             <button
-                class="button-cautionary-muted"
+                class="button-cautionary-muted group"
                 wire:click="update('undo')"
                 title="Undo"
             >
-                <livewire:components.icon variant="undo-2" />
+                <livewire:components.icon variant="undo-2" class="group-hover:animate-wiggle" />
             </button>
         @else
             <button
-                class="button-successful-muted"
+                class="button-successful-muted group"
                 wire:click="update('done')"
                 title="Done"
             >
-                <livewire:components.icon variant="check" />
+                <livewire:components.icon variant="check" class="group-hover:animate-wiggle" />
             </button>
         @endif
         <button
-            class="button-destructive-muted"
+            class="button-destructive-muted group"
             wire:click="delete"
             title="Delete"
         >
-            <livewire:components.icon variant="trash" />
+            <livewire:components.icon variant="trash" class="group-hover:animate-wiggle" />
         </button>
     </div>
 </div>
