@@ -6,9 +6,9 @@
         <button>Update</button>
     </form>
     @if ($todo->done == 1)
-        <button action="/todos/update/undo/{{ $todo->id }}">Undo</a>
+        <button action="/todos/update/undo/{{ $todo->id }}">Undo</button>
     @else
-        <button action="/todos/update/done/{{ $todo->id }}">Done</a>
+        <button action="/todos/update/done/{{ $todo->id }}">Done</button>
     @endif
-        <button action="/todos/delete/{{ $todo->id }}">Delete</a>
+        <button action="/todos/delete/{{ $todo->id }}">Delete</button>
 </div>
